@@ -38,7 +38,7 @@ h1 {
 
 h1 .description {
     margin-left: 5px;
-    color: #b3b3b3;
+    color: #c8c8c8;
 }
 
 .whoohoo {
@@ -58,15 +58,14 @@ h2 {
     padding: 10px;
     margin-bottom: 20px;
     width: 1500px;
-    height: 1000px;
+    height: 480px;
 }
 
 .aboutme {
     position: relative;
-    top: 10px;
-    left: 10px;
     text-decoration: underline;
     text-decoration-color: var(--bs-purple);
+    align-items: center;
 }
 
 .pfp {
@@ -139,39 +138,64 @@ h2 {
     color: var(--bs-purple)
 }
 
-.projectsicon {
+.descriptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.projects, .experience {
     position: relative;
-    top: 30px;
-    right: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.projects-container, .experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Ensure items inside are aligned horizontally */
+    gap: 20px; /* Adjust spacing between items as needed */
+}
+
+.projectsicon, .experienceicon {
+    z-index: 2;
     color: var(--bs-purple);
-    background-color: #0000005e;
+    background-color: #8787875e;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 0px;
     border-radius: 50%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    width: 80px;
+    width: 50px;
+    height: 50px;
 }
 
-.projectsnum {
-    position: relative;
-    top: 95px;
-    right: 953px;
+.projectsnum, .experiencenum {
+    font-size: 40px;
+    z-index: 2;
 }
 
-.projectsdesc {
+.projectsdesc, .experiencedesc {
     position: relative;
-    top: 60px;
-    left: 461.5px;
+    bottom: 33px;
+    left: 3px;
     font-size: 15px;
     font-weight: bold;
+    z-index: 2;
 }
 
-.projects {
-    background-color: #323232f1;
-    background-position: center;
+.projects::before, .experience::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 125px;
+    background-color: #29292995;
+    z-index: 1;
 }
 
 .nav-underline .nav-item .nav-link {
