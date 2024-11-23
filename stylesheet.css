@@ -6,9 +6,8 @@ html, body {
     overflow-x: hidden;
 }
 
-
 body {
-    position: absolute;
+    position: relative;
     background-color: #000000;
     background-image: url('imgs/background.jpg');
     background-size: cover;
@@ -23,16 +22,16 @@ body::before {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 2.2rem;
     font-weight: bold;
     position: relative;
-    top: 350px;
-    left: 110px; 
+    top: 20vh;
+    left: 5%;
     color: white;
 }
 
 .name {
-    font-size: 70px;
+    font-size: 4.5rem;
     font-weight: bold;
 }
 
@@ -44,7 +43,7 @@ h1 .description {
 .whoohoo {
     font-weight: bold;
     text-decoration: underline;
-    text-decoration-color: var(--bs-purple)
+    text-decoration-color: var(--bs-purple);
 }
 
 .navbar {
@@ -55,35 +54,37 @@ h1 .description {
 }
 
 .navbar-brand {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
     color: white;
     transition-duration: 0.35s;
 }
 
 .navbar .nav-link {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     color: white;
     transition-duration: 0.35s;
 }
 
-.navbar .navbar-brand:hover, .nav-link:hover  {
-    color: var(--bs-purple)
+.navbar .navbar-brand:hover, .nav-link:hover {
+    color: var(--bs-purple) !important;
 }
 
 .aboutme {
-    font-size: 25px;
+    font-size: 1.5625rem;
     font-weight: bold;
-    position: relative;
-    top: 1150px;
-    left: 90px;
     color: white;
     background-color: #212529f1;
     padding: 10px;
-    margin-bottom: 20px;
-    width: 1500px;
-    height: 480px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80vh;
 }
 
 .aboutmetitle {
@@ -92,38 +93,35 @@ h1 .description {
     align-items: center;
 }
 
+.navbar-brand:visited {
+    color: white !important;
+}
+
 .pfp {
     border-radius: 50%;
-    position: relative;
-    top: 80px;
-    left: -115px;
     border: 5px solid var(--bs-purple);
     width: 100px;
     height: 100px;
+    margin: 20px 0;
 }
 
 .aboutlist {
-    margin-top: -25px;
-    margin-left: 80px;
+    margin-top: 0;
+    margin-left: 0;
     list-style: none;
+    padding: 0;
 }
 
 .aboutlist li {
     margin-bottom: 10px;
 }
 
-.aboutlist li:nth-child(4) {
-    position: relative;
-    top: -120px;
-    left: 260px;
-}
-
 .para {
     font-size: large;
     font-weight: normal;
     position: relative;
-    top: -50px;
-    left: 5px;
+    top: 0;
+    left: 0;
 }
 
 .descriptions {
@@ -131,6 +129,7 @@ h1 .description {
     justify-content: center;
     align-items: center;
     gap: 150px;
+    flex-wrap: wrap;
 }
 
 .projects, .experience {
@@ -140,6 +139,7 @@ h1 .description {
     align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
+    margin-top: 10vh;
 }
 
 .projects-container, .experience-container {
@@ -148,6 +148,7 @@ h1 .description {
     align-items: center;
     flex-direction: row;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .projectsicon, .experienceicon {
@@ -164,7 +165,7 @@ h1 .description {
 }
 
 .projectsnum, .experiencenum {
-    font-size: 40px;
+    font-size: 2.5rem;
     z-index: 2;
 }
 
@@ -172,7 +173,7 @@ h1 .description {
     position: relative;
     bottom: 33px;
     left: 3px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: bold;
     z-index: 2;
 }
@@ -188,27 +189,27 @@ h1 .description {
 
 .skills {
     position: relative;
-    top: 1250px;
     background: #212529f1;
-    left: 90px;
     padding: 10px;
-    margin-bottom: 20px;
-    width: 1500px;
-    height: 480px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skillstitle {
-    font-size: 60px;
-    position: relative;
+    font-size: 3.75rem;
     color: white;
     font-weight: bold;
-    font-size: 25px;
     text-decoration: underline;
     text-decoration-color: var(--bs-purple);
+    margin-bottom: 20px;
 }
 
 .frontend_skills {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,7 +227,7 @@ h1 .description {
 }
 
 .nav-underline .nav-item .nav-link {
-    font-size: 50px;
+    font-size: 3.125rem;
     background-color: #0000005e;
     display: inline-flex;
     align-items: center;
@@ -240,49 +241,9 @@ h1 .description {
 
 :root,
 [data-bs-theme=light] {
-  --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
-  --bs-primary-rgb: 13, 110, 253;
-  --bs-secondary-rgb: 108, 117, 125;
-  --bs-success-rgb: 25, 135, 84;
-  --bs-info-rgb: 13, 202, 240;
-  --bs-warning-rgb: 255, 193, 7;
-  --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
-  --bs-primary-text-emphasis: #052c65;
-  --bs-secondary-text-emphasis: #2b2f32;
-  --bs-success-text-emphasis: #0a3622;
-  --bs-info-text-emphasis: #055160;
-  --bs-warning-text-emphasis: #664d03;
-  --bs-danger-text-emphasis: #58151c;
-  --bs-light-text-emphasis: #495057;
-  --bs-dark-text-emphasis: #495057;
-  --bs-primary-bg-subtle: #cfe2ff;
-  --bs-secondary-bg-subtle: #e2e3e5;
-  --bs-success-bg-subtle: #d1e7dd;
-  --bs-info-bg-subtle: #cff4fc;
-  --bs-warning-bg-subtle: #fff3cd;
-  --bs-danger-bg-subtle: #f8d7da;
-  --bs-light-bg-subtle: #fcfcfd;
-  --bs-dark-bg-subtle: #ced4da;
-  --bs-primary-border-subtle: #9ec5fe;
-  --bs-secondary-border-subtle: #c4c8cb;
-  --bs-success-border-subtle: #a3cfbb;
-  --bs-info-border-subtle: #9eeaf9;
-  --bs-warning-border-subtle: #ffe69c;
-  --bs-danger-border-subtle: #f1aeb5;
-  --bs-light-border-subtle: #e9ecef;
-  --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg: #fff;
@@ -302,4 +263,131 @@ h1 .description {
   --bs-link-color-rgb: 13, 110, 253;
   --bs-link-decoration: underline;
   --bs-link-hover-color: #650dfd;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2rem;
+        top: 15vh;
+        left: 5%;
+    }
+
+    .name {
+        font-size: 3.75rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5625rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1.125rem;
+    }
+
+    .aboutme {
+        font-size: 1.375rem;
+        margin-top: 115%;
+    }
+
+    .descriptions {
+        gap: 100px;
+    }
+
+    .projects-container, .experience-container {
+        gap: 15px;
+    }
+
+    .skills {
+        top: 30vh;
+        height: 120%;
+    }
+
+    .skillstitle {
+        font-size: 3.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+        top: 10vh;
+        left: 5%;
+    }
+
+    .name {
+        font-size: 3.125rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1rem;
+    }
+
+    .aboutme {
+        font-size: 1.25rem;
+        margin-top: 130%;
+    }
+
+    .descriptions {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .projects-container, .experience-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills {
+        height: 120%;
+    }
+
+    .skillstitle {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        top: 5vh;
+        left: 5%;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.125rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.875rem;
+    }
+
+    .aboutme {
+        font-size: 1.125rem;
+        margin-top: 130%;
+    }
+
+    .descriptions {
+        gap: 30px;
+    }
+
+    .projects-container, .experience-container {
+        gap: 5px;
+    }
+
+    .skills {
+        width: 100%;
+    }
+
+    .skillstitle {
+        font-size: 2.5rem;
+    }
 }
