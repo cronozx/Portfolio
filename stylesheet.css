@@ -47,7 +47,32 @@ h1 .description {
     text-decoration-color: var(--bs-purple)
 }
 
-h2 {
+.navbar {
+    background-color: #00000089 !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    transition-duration: 0.35s;
+}
+
+.navbar .nav-link {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transition-duration: 0.35s;
+}
+
+.navbar .navbar-brand:hover, .nav-link:hover  {
+    color: var(--bs-purple)
+}
+
+.aboutme {
     font-size: 25px;
     font-weight: bold;
     position: relative;
@@ -61,8 +86,7 @@ h2 {
     height: 480px;
 }
 
-.aboutme {
-    position: relative;
+.aboutmetitle {
     text-decoration: underline;
     text-decoration-color: var(--bs-purple);
     align-items: center;
@@ -102,42 +126,6 @@ h2 {
     left: 5px;
 }
 
-.allied {
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: var(--bs-purple);
-    text-decoration-thickness: 3px;
-}
-
-.navbar {
-    background-color: #00000089 !important;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar-brand {
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    transition-duration: 0.35s;
-}
-
-.navbar .nav-link {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    transition-duration: 0.35s;
-}
-
-.navbar .nav-link:hover {
-    color: var(--bs-purple);
-}
-
-.navbar .navbar-brand:hover {
-    color: var(--bs-purple)
-}
-
 .descriptions {
     display: flex;
     justify-content: center;
@@ -158,8 +146,8 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; /* Ensure items inside are aligned horizontally */
-    gap: 20px; /* Adjust spacing between items as needed */
+    flex-direction: row;
+    gap: 20px;
 }
 
 .projectsicon, .experienceicon {
@@ -190,6 +178,45 @@ h2 {
 }
 
 .projects::before, .experience::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 125px;
+    background-color: #29292995;
+    z-index: 1;
+}
+
+.skills {
+    position: relative;
+    top: 1250px;
+    background: #212529f1;
+    left: 90px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 1500px;
+    height: 480px;
+}
+
+.skillstitle {
+    font-size: 60px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: var(--bs-purple);
+}
+
+.frontend_skills {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.frontend_skills::before {
     content: '';
     position: absolute;
     width: 200px;
