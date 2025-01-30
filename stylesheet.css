@@ -260,6 +260,10 @@ h1 .description {
 
 @media (min-width: 927px) and (max-width: 1300px) {
 
+    .aboutme {
+        margin-top: 90%;
+    }
+
     .aboutlist {
         font-size: 100%;
         position: relative;
@@ -268,5 +272,12 @@ h1 .description {
 
     .pfp {
         left: 1%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .aboutme {
+        margin-top: 50%
     }
 }
