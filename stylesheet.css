@@ -88,7 +88,7 @@ h1 .description {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 110%;
+    margin-top: 60%;
 }
 
 .aboutmetitle {
@@ -275,7 +275,7 @@ h1 .description {
 @media (min-width: 927px) and (max-width: 1310px) {
 
     .aboutme {
-        margin-top: 80%;
+        margin-top: 70%;
     }
 
     .aboutlist {
@@ -287,12 +287,5 @@ h1 .description {
     .pfp {
 
         right: 2%;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .aboutme {
-        margin-top: 50%
     }
 }
