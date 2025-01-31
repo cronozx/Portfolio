@@ -135,10 +135,12 @@ h1 .description {
 }
 
 .descriptions {
+    position: relative;
+    right: 3%;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 100%;
+    gap: 90%;
 }
 
 .projects, .experience {
@@ -236,6 +238,8 @@ h1 .description {
   --bs-link-hover-color: #650dfd;
 }
 
+
+
 @media (max-width: 926px) {
 
     h1 .description {
@@ -247,9 +251,9 @@ h1 .description {
     }
 
     .pfp {
-        max-height: 20%;
-        max-width: 20%;
-        left: 40%;
+        max-height: 25%;
+        max-width: 25%;
+        left: 38%;
     }
 
     .aboutlist {
@@ -271,7 +275,8 @@ h1 .description {
     }
 
     .pfp {
-        left: 1%;
+
+        right: 2%;
     }
 }
 
