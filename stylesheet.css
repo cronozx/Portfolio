@@ -245,6 +245,10 @@ h1 .description {
     h1 .description {
         font-size: 80%;
     }
+    
+    .descriptions {
+        gap: 60%;
+    }
 
     .aboutme-container {
         display: table-column;
@@ -262,11 +266,7 @@ h1 .description {
     }
 }
 
-@media (min-width: 927px) and (max-width: 1300px) {
-
-    .aboutme {
-        margin-top: 90%;
-    }
+@media (min-width: 927px) and (max-width: 1310px) {
 
     .aboutlist {
         font-size: 100%;
