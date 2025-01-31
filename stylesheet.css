@@ -273,6 +273,10 @@ h1 .description {
     h1 .description {
         font-size: 65%;
     }
+
+    .aboutme {
+        margin-top: 80%;
+    }
 }
 
 @media (min-width: 1311px) and (max-width: 1440px) {
