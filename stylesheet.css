@@ -266,7 +266,17 @@ h1 .description {
     }
 }
 
+@media (min-width: 1311px) and (max-width: 1440px) {
+    .pfp {
+        right: 10%;
+    }
+}
+
 @media (min-width: 927px) and (max-width: 1310px) {
+
+    .aboutme {
+        margin-top: 80%;
+    }
 
     .aboutlist {
         font-size: 100%;
