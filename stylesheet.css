@@ -238,8 +238,6 @@ h1 .description {
   --bs-link-hover-color: #650dfd;
 }
 
-
-
 @media (max-width: 926px) {
 
     h1 .description {
@@ -248,6 +246,10 @@ h1 .description {
     
     .descriptions {
         gap: 60%;
+    }
+
+    .aboutme {
+        margin-top: 70%
     }
 
     .aboutme-container {
@@ -263,6 +265,13 @@ h1 .description {
     .aboutlist {
         font-size: 70%;
         left: 0.5%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    h1 .description {
+        font-size: 65%;
     }
 }
 
