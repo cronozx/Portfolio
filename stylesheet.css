@@ -95,7 +95,7 @@ h1 .description {
     text-decoration: underline;
     text-decoration-color: var(--bs-purple);
     display: flex;
-    justify-self:center;
+    justify-self: center;
     align-self: center;
 }
 
@@ -212,6 +212,180 @@ h1 .description {
     width: 70px;
 }
 
+.skills {
+    font-size: 1.5625rem;
+    font-weight: bold;
+    color: white;
+    background-color: #212529f1;
+    padding: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50%;
+}
+
+.skillstitle {
+    text-decoration: underline;
+    text-decoration-color: var(--bs-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem; /* Add some space below the title */
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Use rem for gap */
+    margin-top: 3vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background color */
+    padding: 2rem; /* Add padding */
+    border-radius: 10px; /* Add border radius */
+}
+
+.skillslist {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; /* Use rem for gap */
+    justify-content: center; /* Center the skills list */
+}
+
+.skillslist li {
+    margin-bottom: 1rem; /* Use rem for margin */
+}
+
+.java-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #29292995;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.java-icon {
+    font-size: 3rem;
+    color: var(--bs-purple);
+    background-color: #8787875e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.java-num {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    z-index: 2;
+}
+
+.python-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #29292995;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.python-icon {
+    font-size: 3rem;
+    color: var(--bs-purple);
+    background-color: #8787875e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.python-desc {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    z-index: 2;
+}
+
+.sql-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #29292995;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sql-icon {
+    font-size: 3rem;
+    color: var(--bs-purple);
+    background-color: #8787875e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.sql-desc {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    z-index: 2;
+}
+
+.flutter-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #29292995;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.flutter-icon {
+    font-size: 3rem;
+    color: var(--bs-purple);
+    background-color: #8787875e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.flutter-desc {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    z-index: 2;
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-purple: #6f42c1;
@@ -238,8 +412,31 @@ h1 .description {
   --bs-link-hover-color: #650dfd;
 }
 
-@media (max-width: 926px) {
+/* Media Queries */
 
+@media (max-width: 1440px) {
+    .pfp {
+        right: 10%;
+    }
+}
+
+@media (max-width: 1310px) {
+    .aboutme {
+        margin-top: 70%;
+    }
+
+    .aboutlist {
+        font-size: 100%;
+        position: relative;
+        left: 1%;
+    }
+
+    .pfp {
+        right: 2%;
+    }
+}
+
+@media (max-width: 926px) {
     h1 .description {
         font-size: 80%;
     }
@@ -249,7 +446,7 @@ h1 .description {
     }
 
     .aboutme {
-        margin-top: 70%
+        margin-top: 70%;
     }
 
     .aboutme-container {
@@ -269,7 +466,6 @@ h1 .description {
 }
 
 @media (max-width: 700px) {
-
     h1 .description {
         font-size: 65%;
     }
@@ -277,28 +473,26 @@ h1 .description {
     .aboutme {
         margin-top: 80%;
     }
-}
 
-@media (min-width: 1311px) and (max-width: 1440px) {
-    .pfp {
-        right: 10%;
+    .skillslist {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 927px) and (max-width: 1310px) {
-
-    .aboutme {
-        margin-top: 70%;
-    }
-
-    .aboutlist {
-        font-size: 100%;
-        position: relative;
-        left: 1%;
-    }
-
-    .pfp {
-
+@media (max-width: 665px) {
+    .skillslist {
+        grid-template-columns: repeat(2, 1fr);
         right: 2%;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 .name {
+        position: relative;
+        top: 10px;
+    }
+
+    h1 .description {
+        font-size: 60%;
     }
 }
