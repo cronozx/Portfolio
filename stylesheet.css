@@ -226,6 +226,9 @@ h1 .description {
     flex-direction: column;
     align-items: center;
     margin-top: 50%;
+    animation: slideIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .skillstitle {
@@ -234,7 +237,7 @@ h1 .description {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem; /* Add some space below the title */
+    margin-bottom: 1rem; 
 }
 
 .skills-container {
@@ -242,11 +245,11 @@ h1 .description {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem; /* Use rem for gap */
+    gap: 2rem; 
     margin-top: 3vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Add background color */
-    padding: 2rem; /* Add padding */
-    border-radius: 10px; /* Add border radius */
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 2rem; 
+    border-radius: 10px; 
 }
 
 .skillslist {
@@ -254,15 +257,15 @@ h1 .description {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem; /* Use rem for gap */
-    justify-content: center; /* Center the skills list */
+    gap: 1rem;
+    justify-content: center;
 }
 
 .skillslist li {
-    margin-bottom: 1rem; /* Use rem for margin */
+    margin-bottom: 1rem;
 }
 
-.java-item {
+.skill-item {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -274,7 +277,7 @@ h1 .description {
     text-align: center;
 }
 
-.java-icon {
+.skill-icon {
     font-size: 3rem;
     color: var(--bs-purple);
     background-color: #8787875e;
@@ -287,103 +290,25 @@ h1 .description {
     height: 70px;
 }
 
-.java-num {
+.skill-desc {
     font-size: 1.5rem;
     margin-top: 0.5rem;
     z-index: 2;
 }
 
-.python-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #29292995;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
+.fade-in {
+    opacity: 0;
+    scale: 0.5;
+    transition: all 1s;
 }
 
-.python-icon {
-    font-size: 3rem;
-    color: var(--bs-purple);
-    background-color: #8787875e;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0px;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
+.show {
+    opacity: 1;
+    scale: 1;
 }
 
-.python-desc {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    z-index: 2;
-}
-
-.sql-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #29292995;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.sql-icon {
-    font-size: 3rem;
-    color: var(--bs-purple);
-    background-color: #8787875e;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0px;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-
-.sql-desc {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    z-index: 2;
-}
-
-.flutter-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #29292995;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.flutter-icon {
-    font-size: 3rem;
-    color: var(--bs-purple);
-    background-color: #8787875e;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0px;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-}
-
-.flutter-desc {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    z-index: 2;
+.skills, .aboutme {
+    border-radius: 3%;
 }
 
 :root,
@@ -494,5 +419,11 @@ h1 .description {
 
     h1 .description {
         font-size: 60%;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .fade-in {
+        transition: none;
     }
 }
