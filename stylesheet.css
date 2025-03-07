@@ -4,7 +4,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
 body {
@@ -36,6 +36,8 @@ body::before {
     font-weight: bold;
     color: white;
     transition-duration: 0.35s;
+    position: relative;
+    bottom: 0.35vh;
 }
 
 .navbar .nav-link {
@@ -173,7 +175,12 @@ h1 .description {
     flex-direction: column;
     margin-bottom: 20px;
     margin-top: 10vh;
-    background-color: #212529;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    height: auto;
+    padding: 20px;
+    width: 120%;
+    max-width: 122px;
 }
 
 .projects-container, .experience-container {
@@ -192,7 +199,6 @@ h1 .description {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    line-height: 0px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -202,6 +208,7 @@ h1 .description {
     font-size: 1.5rem;
     margin-bottom: 5%;
     z-index: 2;
+    margin-top: 20%;
 }
 
 .projectsdesc, .experiencedesc {
@@ -536,9 +543,30 @@ h1 .description {
         grid-template-columns: repeat(2, 1fr);
         right: 2%;
     }
+
+    .aboutme {
+        margin-top: 170%;
+    }
+
+    .skills {
+        margin-top: 150%;
+    }
+
+    .projects {
+        margin-top: 150%;
+    }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 475px) {
+    .navbar-brand {
+        bottom: 0.15vh;
+        font-size: 1rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.8rem;
+    }
+
     h1 .name {
         position: relative;
         top: 10px;
@@ -546,6 +574,22 @@ h1 .description {
 
     h1 .description {
         font-size: 60%;
+    }
+
+    .projects-desc, .experience {
+        right: 3px;
+    }
+
+    .aboutme {
+        margin-top: 170%;
+    }
+
+    .skills {
+        margin-top: 150%;
+    }
+
+    .projects {
+        margin-top: 150%;
     }
 }
 
