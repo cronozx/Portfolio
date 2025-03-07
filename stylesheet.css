@@ -158,7 +158,7 @@ h1 .description {
     font-weight: normal;
 }
 
-.descriptions {
+.aboutme-descriptions {
     position: relative;
     right: 3%;
     justify-content: center;
@@ -181,15 +181,6 @@ h1 .description {
     padding: 20px;
     width: 120%;
     max-width: 122px;
-}
-
-.projects-container, .experience-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 .projectsicon, .experienceicon {
@@ -496,7 +487,7 @@ h1 .description {
         font-size: 80%;
     }
     
-    .descriptions {
+    .aboutme-descriptions {
         gap: 60%;
     }
 
@@ -574,6 +565,18 @@ h1 .description {
 
     h1 .description {
         font-size: 60%;
+    }
+
+    .aboutlist .description {
+        font-size: small;
+    }
+    
+    .aboutlist .description.email {
+        font-size: x-small;
+    }
+
+    .aboutme-descriptions {
+        gap: 10px;
     }
 
     .projects-desc, .experience {
