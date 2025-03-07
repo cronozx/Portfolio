@@ -4,6 +4,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,30 +22,7 @@ body::before {
     filter: grayscale(100%);
 }
 
-h1 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    position: relative;
-    top: 20vh;
-    left: 5%;
-    color: white;
-}
-
-.name {
-    font-size: 4.5rem;
-    font-weight: bold;
-}
-
-h1 .description {
-    margin-left: 5px;
-    color: #c8c8c8;
-}
-
-.boldDev {
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: var(--bs-purple);
-}
+/* navbar */
 
 .navbar {
     background-color: #00000089 !important;
@@ -61,6 +39,7 @@ h1 .description {
 }
 
 .navbar .nav-link {
+    position: relative;
     font-size: 1.25rem;
     font-weight: bold;
     color: white;
@@ -74,6 +53,48 @@ h1 .description {
 .navbar-brand:visited {
     color: white !important;
 }
+
+/* front page */
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    position: relative;
+    top: 20vh;
+    left: 5%;
+    color: white;
+}
+
+.name {
+    position: relative;
+    font-size: 4.5rem;
+}
+
+h1 .description {
+    margin-left: 5px;
+    color: #c8c8c8;
+}
+
+.boldDev {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: var(--bs-purple);
+}
+
+.nav-underline .nav-item .nav-link {
+    font-size: 3.125rem;
+    background-color: #0000005e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0px;
+    border-radius: 50%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 70px;
+}
+
+/* about me */
 
 .aboutme {
     font-size: 1.5625rem;
@@ -89,6 +110,7 @@ h1 .description {
     flex-direction: column;
     align-items: center;
     margin-top: 60%;
+    scroll-margin-top: 40vh;
 }
 
 .aboutmetitle {
@@ -199,18 +221,7 @@ h1 .description {
     z-index: 1;
 }
 
-.nav-underline .nav-item .nav-link {
-    font-size: 3.125rem;
-    background-color: #0000005e;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0px;
-    border-radius: 50%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    width: 70px;
-}
+/* skills */
 
 .skills {
     font-size: 1.5625rem;
@@ -296,6 +307,89 @@ h1 .description {
     z-index: 2;
 }
 
+.skills, .aboutme {
+    border-radius: 2%;
+}
+
+/* Projects */
+
+.projects {
+    font-size: 1.5625rem;
+    font-weight: bold;
+    color: white;
+    background-color: #212529f1;
+    padding: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50%;
+    animation: slideIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.projectstitle {
+    text-decoration: underline;
+    text-decoration-color: var(--bs-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem; 
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; 
+    margin-top: 3vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 2rem; 
+    border-radius: 10px; 
+}
+
+.projectslist {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #29292995;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+.project-title {
+    text-decoration-color: #6f42c1;
+    text-decoration: underline;
+}
+
+.project-desc {
+    font-size: small;
+}
+
+.project-link {
+    color: #6f42c1;
+}
+
+/* transistions */
+
 .fade-in {
     opacity: 0;
     scale: 0.5;
@@ -307,8 +401,34 @@ h1 .description {
     scale: 1;
 }
 
-.skills, .aboutme {
-    border-radius: 3%;
+.slide-in-right-name {
+    right: 20%;
+    transition: all 1s;
+}
+
+.slide-right {
+    right: 0;
+}
+
+.name-icon {
+    transform: translateX(-215%);
+}
+
+.name-icon-slide-right {
+    transform: translateX(0%);
+}
+
+.name-icon:nth-child(1) {
+    transition: all 1s;
+}
+
+.name-icon:nth-child(2) {
+    transition: all 0.8s;
+}
+
+/* remove selection */
+::selection {
+    background-color: transparent;
 }
 
 :root,
@@ -371,7 +491,7 @@ h1 .description {
     }
 
     .aboutme {
-        margin-top: 70%;
+        margin-top: 130%;
     }
 
     .aboutme-container {
@@ -388,6 +508,10 @@ h1 .description {
         font-size: 70%;
         left: 0.5%;
     }
+
+    .skills {
+        margin-top: 120%;
+    }
 }
 
 @media (max-width: 700px) {
@@ -396,7 +520,7 @@ h1 .description {
     }
 
     .aboutme {
-        margin-top: 80%;
+        margin-top: 130%;
     }
 
     .skillslist {
@@ -424,6 +548,10 @@ h1 .description {
 
 @media (prefers-reduced-motion) {
     .fade-in {
+        transition: none;
+    }
+
+    .slide-in-left {
         transition: none;
     }
 }

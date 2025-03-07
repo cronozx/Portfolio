@@ -8,8 +8,11 @@
                 <link rel="stylesheet" type="text/css" href="stylesheet.css">
                 <script src="https://kit.fontawesome.com/052e93c67c.js" crossorigin="anonymous"></script>
                 <script src="js/removehash.js"></script>
-                <script src="js/smoothhome.js"></script>
-                <script src="js/fadeAnimation.js"></script>
+                <script src="js/animations/smoothhome.js"></script>
+                <script src="js/animations/fadeAnimation.js"></script>
+                <script src="js/animations/slideRightAnimation.js"></script>
+                <script src="js/animations/staggerListItems.js"></script>
+                <script src="js/navBarScroll.js"></script>
             </head>
             <top id = "top"></top>
             <body>
@@ -17,7 +20,7 @@
                 <nav id="navbar" class="navbar bg-body-tertiary px-3 mb-3">
                     <a class="navbar-brand" id="brand" href="">cronozx</a>
                     <ul class="nav nav-pills">
-                    <li class="nav-item">
+                    <li class="nav-item about-me-nav">
                         <a class="nav-link" href="#aboutme" id="aboutme-nav">About Me</a>
                     </li>
                     <li class="nav-item">
@@ -28,14 +31,14 @@
             </body>
             <!--Intro-->
             <h1>
-                <name class = "name" id = "name">cronozx</name>
+                <name class = "name slide-in-right-name" id = "name">cronozx</name>
                 <br>
                 <small class="description">I'm a <boldDev class = "boldDev">Full Stack Developer</boldDev> from The United States.</small>
                 <ul class="nav nav-underline">
-                    <li class="nav-item">
+                    <li class="nav-item name-icon">
                       <a class="nav-link" href = "https://github.com/cronozx"><i class="bi bi-github"></i></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item name-icon">
                         <a class="nav-link" href = "https://discordapp.com/users/474642621382393877"><i class="bi bi-discord"></i></a>
                       </li>
                   </ul>
@@ -120,6 +123,19 @@
                 <li class="js-item skill-item skill-item">
                     <div class="js-icon skill-icon"><i class="fa-brands fa-js"></i></div>
                     <div class="js-desc skill-desc">Javascript</div>
+                </li>
+            </ul>
+        </div>
+    </h2>
+
+    <h2 class="projects fade-in">
+        <about class="projectstitle" id="skills">My Projects</about>
+        <div class="projects-container fade-in">
+            <ul class="projectslist fade-in">
+                <li class="project">
+                    <div class="project-title">Duels Bot</div>
+                    <div class="project-desc">A Bukkit plugin built using JDA and Duels Bukkit API used to track player stats</div>
+                    <a class="project-link" href="https://github.com/cronozx/Duels-Bot.git">See Repo</a>
                 </li>
             </ul>
         </div>
