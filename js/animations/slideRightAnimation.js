@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
-
+    
     const elements = document.querySelectorAll('.slide-in-right-name');
     elements.forEach(element => {
         observer.observe(element);

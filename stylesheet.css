@@ -165,7 +165,7 @@ h1 .description {
     gap: 90%;
 }
 
-.projects, .experience {
+.projects-desc, .experience {
     position: relative;
     display: flex;
     justify-content: center;
@@ -173,6 +173,7 @@ h1 .description {
     flex-direction: column;
     margin-bottom: 20px;
     margin-top: 10vh;
+    background-color: #212529;
 }
 
 .projects-container, .experience-container {
@@ -237,6 +238,7 @@ h1 .description {
     flex-direction: column;
     align-items: center;
     margin-top: 50%;
+    scroll-margin-top: 40vh;
     animation: slideIn ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -376,16 +378,17 @@ h1 .description {
 }
 
 .project-title {
-    text-decoration-color: #6f42c1;
+    font-size: larger;
     text-decoration: underline;
+    text-decoration-color: var(--bs-purple);
 }
 
 .project-desc {
-    font-size: small;
+    font-size: medium;
 }
 
 .project-link {
-    color: #6f42c1;
+    color: var(--bs-link-color);
 }
 
 /* transistions */
@@ -402,7 +405,7 @@ h1 .description {
 }
 
 .slide-in-right-name {
-    right: 20%;
+    right: 15%;
     transition: all 1s;
 }
 
@@ -411,7 +414,7 @@ h1 .description {
 }
 
 .name-icon {
-    transform: translateX(-215%);
+    transform: translateX(-100%);
 }
 
 .name-icon-slide-right {
@@ -423,7 +426,7 @@ h1 .description {
 }
 
 .name-icon:nth-child(2) {
-    transition: all 0.8s;
+    transition: all 0.7s;
 }
 
 /* remove selection */
