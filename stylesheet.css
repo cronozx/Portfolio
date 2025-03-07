@@ -330,6 +330,7 @@ h1 .description {
     animation: slideIn ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    border-radius: 2%;
 }
 
 .projectstitle {
@@ -564,7 +565,7 @@ h1 .description {
     }
 
     h1 .description {
-        font-size: 60%;
+        font-size: 35%;
     }
 
     .aboutlist .description {
@@ -593,6 +594,16 @@ h1 .description {
 
     .projects {
         margin-top: 150%;
+    }
+}
+
+@media (max-width: 474px) {
+    .aboutlist .description {
+        font-size: x-small;
+    }
+    
+    .aboutlist .description.email {
+        font-size: xx-small;
     }
 }
 
