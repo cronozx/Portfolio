@@ -605,6 +605,11 @@ h1 .description {
     .aboutlist .description.email {
         font-size: xx-small;
     }
+
+    .skill-item {
+        width: 130px;
+        max-width: 90%;
+    }
 }
 
 @media (prefers-reduced-motion) {
