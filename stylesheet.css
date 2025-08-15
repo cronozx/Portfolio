@@ -3,7 +3,7 @@
 :root {
     --container-max-width: 1200px;
     --container-padding: 1rem;
-    --section-spacing: 50rem;
+    --section-spacing: clamp(75vh, 80vw, 100vh);
     --font-size-base: clamp(0.875rem, 2.5vw, 1rem);
     --font-size-lg: clamp(1.125rem, 3vw, 1.25rem);
     --font-size-xl: clamp(1.5rem, 4vw, 2rem);
@@ -121,7 +121,7 @@ h1 .description {
     background-color: #212529f1;
     padding: clamp(1rem, 4vw, 2rem);
     margin: 0 auto;
-    margin-top: clamp(20vh, 50vw, 60vh);
+    margin-top: clamp(75vh, 80vw, 100vh);
     width: min(90%, var(--container-max-width));
     height: auto;
     display: flex;
@@ -433,6 +433,114 @@ h1 .description {
     color: var(--bs-purple);
 }
 
+/* Contact */
+.contact {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: white;
+    background-color: #212529f1;
+    padding: clamp(1rem, 4vw, 2rem);
+    margin: 0 auto;
+    margin-top: var(--section-spacing);
+    width: min(90%, var(--container-max-width));
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-radius: 1rem;
+}
+
+.contact-title {
+    text-decoration: underline;
+    text-decoration-color: var(--bs-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: var(--font-size-xl);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: clamp(1rem, 4vw, 2rem); 
+    border-radius: 10px; 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.contact-field {
+    width: 60%;
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-base);
+    color: #fff;
+    background-color: #1f1f1f;
+    border: 1px solid rgba(101, 13, 253, 0.75);
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
+}
+
+.contact-subject {
+    width: 50vw;
+    height: 15vh;
+}
+
+.contact-field::placeholder {
+    color: #bbb;
+}
+
+.contact-field:focus {
+    outline: none;
+    border-color: var(--bs-purple);
+    box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.3);
+}
+
+.contact-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-base);
+    color: #fff;
+    background-color: var(--bs-purple);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #5a2d91;
+    transform: translateY(-2px);
+}
+
+.contact-button:active {
+    transform: translateY(0);
+}
+
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 0s, color 0s 0s;
+    transition-delay: calc(infinity * 1s);
+}
+
 /* transistions */
 
 .fade-in {
@@ -471,6 +579,16 @@ h1 .description {
     transition: all 0.7s;
 }
 
+.submit-success {
+    background-color: #5CE65C;
+    transition: all 1s;
+}
+
+.submit-fail {
+    background-color: red;
+    transition: all 1s;
+}
+
 /* remove selection */
 ::selection {
     background-color: transparent;
@@ -505,7 +623,6 @@ h1 .description {
 @media (max-width: 576px) {
     :root {
         --container-padding: 0.75rem;
-        --section-spacing: 2rem;
     }
 
     .aboutme-container {
@@ -574,7 +691,6 @@ h1 .description {
 @media (min-width: 1200px) {
     :root {
         --container-padding: 2rem;
-        --section-spacing: 6rem;
     }
 }
 

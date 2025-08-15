@@ -14,6 +14,7 @@
                 <script src="js/animations/staggerListItems.js"></script>
                 <script src="js/navBarScroll.js"></script>
                 <script src="js/getPfp.js"></script>
+                <script src="js/removeFormspreeRedirect.js"></script>
             </head>
             <top id = "top"></top>
             <body>
@@ -74,13 +75,13 @@
                     <li class="projects-desc">
                         <projectsicon class="projectsicon"><i class="bi bi-journal-code"></i></projectsicon>
                         <projectsnum class = "projectsnum">4</projectsnum>
-                        <br> <description class = "projectsdesc">Projects</description>
+                        <description class = "projectsdesc">Projects</description>
                     </li>
 
                     <li class="experience">
                         <projectsicon class="experienceicon"><i class="bi bi-clock-history"></i></projectsicon>
-                        <projectsnum class = "experiencenum">1 Year</projectsnum>
-                        <br> <description class = "experiencedesc">Experience</description>
+                        <projectsnum class = "experiencenum">2 Years</projectsnum>
+                        <description class = "experiencedesc">Experience</description>
                     </li>
                 </ul>
             </h2>
@@ -177,5 +178,19 @@
                     <a class="project-link" href="https://github.com/cronozx/File-Converter-Backend">See Backend</a>
                 </li>
             </ul>
+        </div>
+    </h2>
+
+    <!-- Contact Section -->
+    <h2 class="contact fade-in">
+        <about class="contact-title" id="contact">Contact Me</about>
+        <div class="contact-container fade-in">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/mldlvvrl" method="POST">
+                <label form="contact-form" for="contact-email">Email</label>
+                <input type="email" name="email" id="contact-email" class="contact-field" placeholder="your-email@example.com" required/>
+                <label form="contact-form" for="contact-text">Message</label>
+                <textarea id="contact-text" name="message" class="contact-field contact-subject" placeholder="Type your message here." required></textarea>
+                <button id="submit-button" type="submit" class="contact-button">Send Message</button>
+            </form>
         </div>
     </h2>
