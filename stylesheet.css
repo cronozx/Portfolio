@@ -51,7 +51,7 @@ body::before {
     transition: color 0.35s ease;
 }
 
-.navbar .nav-link {
+.navbar .nav-link, .navbar-button {
     position: relative;
     font-size: clamp(0.9rem, 3vw, 1.25rem);
     font-weight: bold;
@@ -60,12 +60,29 @@ body::before {
     padding: 0.5rem 1rem;
 }
 
-.navbar .navbar-brand:hover, .nav-link:hover {
+.navbar .navbar-brand:hover, .nav-link:hover, .navbar-button:hover {
     color: var(--bs-purple) !important;
 }
 
 .navbar-brand:visited {
     color: white !important;
+}
+
+/* nav page */
+.nav-page {
+    background-color: #000000;
+    height: 100%;
+    color: white;
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+    padding-left: 15px;
+    gap: 60px;
+    font-size: 30px;
 }
 
 /* front page */
@@ -542,6 +559,33 @@ input:-webkit-autofill:focus {
 }
 
 /* transistions */
+#navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+#navpage {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-page-links {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.nav-page-links.slide {
+    transform: translateX(0);
+}
+
+.nav-open {
+   background-color: #000 !important;
+   padding-bottom: 0;
+   margin: 0 !important;
+   display: flex;
+}
+
+body:has(.nav-open) {
+   overflow: hidden;
+}
 
 .fade-in {
     opacity: 0;

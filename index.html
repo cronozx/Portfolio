@@ -8,31 +8,31 @@
                 <link rel="stylesheet" type="text/css" href="stylesheet.css">
                 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
                 <script src="js/removehash.js"></script>
-                <script src="js/animations/smoothhome.js"></script>
+                <script type="module" src="js/animations/smoothhome.js"></script>
                 <script src="js/animations/fadeAnimation.js"></script>
                 <script src="js/animations/slideRightAnimation.js"></script>
                 <script src="js/animations/staggerListItems.js"></script>
-                <script src="js/navBarScroll.js"></script>
+                <script type="module" src="js/animations/navbar/navBarScroll.js"></script>
                 <script src="js/getPfp.js"></script>
                 <script src="js/removeFormspreeRedirect.js"></script>
+                <script type="module" src="js/animations/navbar/openNavBar.js"></script>
             </head>
             <top id = "top"></top>
             <body>
                 <!--NavBar-->
-                <nav id="navbar" class="navbar bg-body-tertiary px-3 mb-3">
+                <section id="navbar" class="navbar bg-body-tertiary px-3 mb-3">
                     <a class="navbar-brand" id="brand" href="">cronozx</a>
-                    <ul class="nav nav-pills">
-                        <li class="nav-item navbar-link" id="aboutme-link">
-                            <a class="nav-link" href="#aboutme" id="aboutme-nav">About Me</a>
-                        </li>
-                        <li class="nav-item navbar-link" id="skills-link">
-                            <a class="nav-link" href="#skills" id="skills-nav">Skills</a>
-                        </li>
-                        <li class="nav-item navbar-link" id="projects-link">
-                            <a class="nav-link" href="#projects" id="projects-nav">Projects</a>
-                        </li>
+                    <i id="navbar-button" class="bi bi-list navbar-button"></i>
+                </section>
+
+                <div id="navpage" class="nav-page">
+                    <ul class="nav-links">
+                        <label id="aboutme-link" class="aboutme-link nav-link nav-page-links">About Me</label>
+                        <label id="skills-link" class="skills-link nav-link nav-page-links">My Stack</label>
+                        <label id="projects-link" class="projects-link nav-link nav-page-links">Projects</label>
+                        <label id="contact-link" class="contact-link nav-link nav-page-links">Contact Me</label>
                     </ul>
-                </nav>
+                </div>
             </body>
             <!--Intro-->
             <h1>
