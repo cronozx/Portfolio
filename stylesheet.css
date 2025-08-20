@@ -60,10 +60,6 @@ body::before {
     padding: 0.5rem 1rem;
 }
 
-.navbar .navbar-brand:hover, .nav-link:hover, .navbar-button:hover {
-    color: var(--bs-purple) !important;
-}
-
 .navbar-brand:visited {
     color: white !important;
 }
@@ -662,6 +658,18 @@ body:has(.nav-open) {
   --bs-link-color-rgb: 13, 110, 253;
   --bs-link-decoration: underline;
   --bs-link-hover-color: #650dfd;
+}
+
+@media (hover: hover) {
+    .navbar .navbar-brand:hover, .nav-link:hover, .navbar-button:hover {
+        color: var(--bs-purple) !important;
+    }
+}
+
+@media (hover: none) {
+    .navbar .navbar-brand:active, .nav-link:active, .navbar-button:active {
+        color: var(--bs-purple) !important;
+    }
 }
 
 @media (max-width: 576px) {
