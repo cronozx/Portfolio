@@ -78,7 +78,7 @@ body::before {
     padding-top: 15vh;
     padding-left: 15px;
     gap: 60px;
-    font-size: 30px;
+    font-size: clamp(1.875rem, 3vw, 3.75rem);
 }
 
 /* front page */
@@ -658,6 +658,10 @@ body:has(.nav-open) {
   --bs-link-color-rgb: 13, 110, 253;
   --bs-link-decoration: underline;
   --bs-link-hover-color: #650dfd;
+}
+
+.nav-page-links:hover {
+    transform: translateY(-5px);
 }
 
 @media (hover: hover) {
