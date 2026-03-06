@@ -55,6 +55,18 @@
     gap: 5%;
 }
 
+.projectLink {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    text-decoration: inherit;
+    text-decoration-color: inherit;
+    text-decoration-thickness: inherit;
+    padding: 0;
+    font-size: inherit;
+}
+
 .projectLink:hover {
     cursor: pointer;
 }
