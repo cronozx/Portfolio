@@ -16,7 +16,7 @@ export const ProjectCard: React.FC<ProjectCardInterface> = ({projectName, projec
             <span className='projectDesc'>{projectDesc}</span>
             <div className='linkWrapper'>
                 {Array.from(projectLinks.entries()).map(([i, project]) => (
-                    <a className='projectLink' onClick={project.function}>{project.name}</a>
+                    <button className='projectLink' onClick={project.function}>{project.name}</button>
                 ))}
             </div>
         </div>

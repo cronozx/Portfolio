@@ -32,7 +32,7 @@ const DISPLAY_NAME_MAP: Record<string, string> = {
 export const TechContainer: React.FC<TechContainerInterface> = ({cards, title}) => {
     return (
         <div className='techSectionContainer'>
-            <a className='techSectionTitle'>{title}</a>
+            <h3 className='techSectionTitle'>{title}</h3>
             <div className='iconsContainer'>
                 {cards.map(tech => (
                     <TechCard logo={tech.url} name={DISPLAY_NAME_MAP[tech.url.split('/')[7]]}/>

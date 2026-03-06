@@ -9,9 +9,9 @@ interface TechCardInterface {
 export const TechCard: React.FC<TechCardInterface> = ({name, logo}) => {
     return (
         <div className="logoContainer">
-            <img className="logo" src={logo}/>
+            <img className="logo" src={logo} alt={name}/>
             <div className="overlay">
-                <a className="logoName">{name}</a>
+                <span className="logoName">{name}</span>
             </div>
         </div>
     )

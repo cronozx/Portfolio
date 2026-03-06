@@ -261,11 +261,11 @@ function App() {
           <div className='main'>
             {/* landing page start  */}
             <div className='landing'>
-              <a className='name' id='name'>
+              <div className='name' id='name'>
                 <span ref={firstNameRef}></span> <br/>
                 <span ref={lastNameRef}></span>
-              </a>
-              <a className='desc'> <i className='bi bi-caret-right'/>Full Stack Developer</a>
+              </div>
+              <div className='desc'> <i className='bi bi-caret-right'/>Full Stack Developer</div>
 
               <div className='buttonBar'>                
                 <NavButton buttonName='Projects' onClick={() => {ScrollSmoother.get()?.scrollTo(document.getElementById('work'), true)}}/>

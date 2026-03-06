@@ -16,7 +16,7 @@ export const Section = forwardRef<HTMLDivElement, SectionProps>(
 
     const titleElement = (
       <div className='snakeSectionTitle' ref={titleRef}>
-        <a className={titleClassName}>{title}</a>
+        <h2 className={titleClassName}>{title}</h2>
       </div>
     );
 
