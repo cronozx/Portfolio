@@ -1,0 +1,80 @@
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 1vh;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aboutText {
+    font-family: 'Inria Sans';
+    font-size: 18px;
+    line-height: 1.7;
+    color: #C8C8C8;
+    margin: 0;
+}
+
+.aboutHighlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.highlightItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: rgba(136, 0, 255, 0.1);
+    border: 1px solid rgba(136, 0, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.highlightItem:hover {
+    background: rgba(136, 0, 255, 0.2);
+    border-color: rgba(136, 0, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.highlightIcon {
+    font-size: 20px;
+    color: #8800FF;
+}
+
+.highlightText {
+    font-family: 'Inria Sans';
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+/* Media queries */
+@media(max-width: 900px) {
+    .aboutContainer {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .aboutText {
+        font-size: 16px;
+    }
+
+    .highlightItem {
+        padding: 10px 16px;
+    }
+
+    .highlightText {
+        font-size: 13px;
+    }
+}

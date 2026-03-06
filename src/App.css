@@ -1,0 +1,237 @@
+.App {
+  position: relative;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #0000;
+  backdrop-filter: blur(10px);
+
+  overflow: hidden !important;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+/* landing page */
+
+.landing {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30vh;
+}
+
+.name {
+  font-family: Inria Sans;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.desc {
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+
+  color: #C8C8C8;
+  
+  text-decoration: underline;
+  text-decoration-color: #8800FF;
+}
+
+.buttonBar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  gap: 10%;
+  margin-top: 3%;
+}
+
+.iconButtonBar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  gap: 5%;
+  margin-top: 3%;
+  color: #8800FF;
+}
+
+.bi-caret-right {
+  color: #8800FF;
+}
+
+/* work */
+.workTitle {
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.workContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  justify-items: center;
+
+  align-content: center;
+
+  gap: 10%;
+  padding: 10%;
+
+  border-radius: 1vh;
+
+  width: 100%;
+  max-width: 800px;
+
+  background:rgba(0, 0, 0, 0.55);
+}
+
+/* tech stack */
+.stackContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 5%;
+    padding: 5%;
+
+    border-radius: 1vh;
+    
+    max-width: 800px;
+
+    background: rgba(0,0,0,0.5);
+}
+
+.stackTitle {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: 'Inria Sans';
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+
+/* about me */
+.aboutTitle {
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Snake line system */
+.snakeContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40vh;
+    padding: 0 20px;
+    padding-top: 100px;
+    gap: 120px;
+}
+
+.snakeSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 100;
+}
+
+.snakePath {
+    vector-effect: non-scaling-stroke;
+}
+
+.snakeMidpoint {
+  fill: #ffffff;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 3px;
+  filter: drop-shadow(0 0 8px rgba(136, 0, 255, 0.6));
+}
+
+
+/* media queries */
+@media(max-width: 330px) {
+  /* landing */
+  .buttonBar {
+    gap: 2%;
+  }
+
+  .navButton {
+    width: 100px !important;
+    height: 50px !important;
+  }
+}
+
+@media(max-width: 900px) {
+  /* hide snake lines on mobile */
+  .snakeRow,
+  .snakeLine,
+  .snakeSvg {
+    display: none;
+  }
+
+  .snakeContainer {
+    margin-top: 50px;
+    gap: 40px;
+  }
+
+  /* landing */
+  .name {
+    font-size: 48px;
+  }
+
+  .buttonBar {
+    gap: 3%;
+  }
+
+  .navButton {
+    width: 110px !important;
+    height: 50px !important;
+  }
+
+  /* work */
+  .workContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 90%;
+  }
+
+  /* stack */
+  .stackContainer {
+    width: 90%;
+  }
+}
