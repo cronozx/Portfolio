@@ -204,7 +204,6 @@ function App() {
       const horizontalGap = section3LineX - section2LineX;
       const r2 = Math.max(0, Math.min(r, horizontalGap / 2 - 1));
 
-      const section3End = section3Bottom;
       const mid1Y = (section1Top + section1Bottom) / 2;
       const mid2Y = (section1Bottom + section2Bottom) / 2;
       const mid3Y = (section2Bottom + section3Bottom) / 2;
