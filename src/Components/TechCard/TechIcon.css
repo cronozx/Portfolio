@@ -19,8 +19,10 @@
     text-align: center;
 }
 
-.logoContainer:hover .overlay {
-    opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+    .logoContainer:hover .overlay {
+        opacity: 1;
+    }
 }
 
 .logo {
