@@ -24,11 +24,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "client": "react-scripts start",
+    "start": "react-scripts start",
     "server": "nodemon --exec ts-node server.ts",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "react-scripts build && tsc server.ts --outDir . --target es2020 --module commonjs --esModuleInterop --resolveJsonModule",
-    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm start\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
