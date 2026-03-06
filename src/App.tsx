@@ -1,8 +1,7 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import './App.css';
 import { IconButton } from './Components/IconButton/IconButton';
 import { NavButton } from './Components/NavButton/NavButton';
-import { ContactModal } from './Components/ContactModal/ContactModal';
 import { typewriter } from './Animations/TypeWriter';
 import { gsap } from 'gsap';
 import { ScrollSmoother, ScrollTrigger, TextPlugin } from 'gsap/all';
@@ -22,15 +21,6 @@ function openGithub() {
 }
 
 function App() {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-
-  const openContactModal = () => {
-    setIsContactModalOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactModalOpen(false);
-  };
   const firstNameRef = useRef<HTMLSpanElement>(null);
   const lastNameRef = useRef<HTMLSpanElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
@@ -198,12 +188,12 @@ function App() {
       const section3LineX = section3TitleRect.right - containerRect.left;
       
       const midX = containerRect.width / 2;
-      const startY = 50;
+      const startY = section1Top;
       const r = 20;
       const horizontalGap = section3LineX - section2LineX;
       const r2 = Math.max(0, Math.min(r, horizontalGap / 2 - 1));
 
-      const section3End = section3Bottom - 200;
+      const section3End = section3Bottom;
       const mid1Y = (section1Top + section1Bottom) / 2;
       const mid2Y = (section1Bottom + section2Bottom) / 2;
 
@@ -285,7 +275,7 @@ function App() {
 
               <div className='iconButtonBar'>
                 <IconButton iconName='github' onClick={openGithub}></IconButton>
-                <IconButton iconName='envelope-fill' onClick={openContactModal}></IconButton>
+                <IconButton iconName='envelope-fill' onClick={openGithub}></IconButton>
               </div>
             </div>
             {/* landing page end  */}
@@ -378,11 +368,6 @@ function App() {
 
           </div>
         </div>
-        
-        <ContactModal 
-          isOpen={isContactModalOpen} 
-          onClose={closeContactModal} 
-        />
       </div>
   );
 }
