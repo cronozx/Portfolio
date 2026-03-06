@@ -10,13 +10,7 @@
     border-radius: 16px;
     border: 1px solid rgba(136, 0, 255, 0.15);
     box-shadow: 0 4px 30px rgba(136, 0, 255, 0.1);
-    transition: all 0.3s ease;
-    will-change: transform;
-}
-
-.snakeSection:hover {
-    border-color: rgba(136, 0, 255, 0.4);
-    box-shadow: 0 8px 40px rgba(136, 0, 255, 0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .snakeSectionRight {
@@ -51,8 +45,15 @@
     transition: height 0.4s ease;
 }
 
-.snakeSection:hover .snakeSectionTitle::before {
-    height: 100%;
+@media (hover: hover) and (pointer: fine) {
+    .snakeSection:hover {
+        border-color: rgba(136, 0, 255, 0.4);
+        box-shadow: 0 8px 40px rgba(136, 0, 255, 0.2);
+    }
+
+    .snakeSection:hover .snakeSectionTitle::before {
+        height: 100%;
+    }
 }
 
 .snakeSectionContent {
@@ -82,10 +83,6 @@
         flex-direction: column;
         align-items: center;
         padding: 20px;
-    }
-
-    .snakeSection:hover {
-        transform: none;
     }
 
     .snakeSectionLeft {
@@ -122,8 +119,10 @@
         left: 0;
     }
 
-    .snakeSection:hover .snakeSectionTitle::before {
-        width: 100%;
-        height: 3px;
+    @media (hover: hover) and (pointer: fine) {
+        .snakeSection:hover .snakeSectionTitle::before {
+            width: 100%;
+            height: 3px;
+        }
     }
 }
