@@ -59,18 +59,22 @@
   padding: 5%;
 }
 
-@media(max-width: 1024px) {
-  .logoName {
-    font-size: 8px;
-  }
-}
+@media(max-width: 900px) {
+    .techSectionContainer {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
 
-@media(max-width: 425px) {
-  .techSectionContainer {
-    width: 70%;
-  }
+    .techSectionTitle {
+        font-size: 14px;
+    }
 
-  .iconsContainer {
-    width: 80%;
-  }
+    .iconsContainer {
+        max-width: 100%;
+        gap: 8%;
+        padding: 5px;
+    }
 }

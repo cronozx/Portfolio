@@ -154,7 +154,7 @@
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    margin-top: 40vh;
+    margin-top: 50vh;
     padding: 0 20px;
     padding-top: 100px;
     padding-bottom: 120px;
@@ -206,36 +206,69 @@
   }
 
   .snakeContainer {
-    margin-top: 50px;
+    margin-top: 20vh;
+    padding: 0 10px;
+    padding-top: 50px;
     padding-bottom: 60px;
-    gap: 40px;
+    gap: 325px;
+    max-width: 100%;
   }
 
   /* landing */
   .name {
-    font-size: 48px;
+    font-size: 32px;
+    margin-top: 20vh;
+  }
+
+  .desc {
+    font-size: 16px;
   }
 
   .buttonBar {
     gap: 3%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .navButton {
-    width: 110px !important;
-    height: 50px !important;
+    width: 120px !important;
+    height: 40px !important;
+    font-size: 12px !important;
   }
 
   /* work */
+  .workTitle {
+    font-size: 28px;
+  }
+
   .workContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    width: 90%;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    gap: 15px;
+    box-sizing: border-box;
   }
 
   /* stack */
+  .stackTitle {
+    font-size: 28px;
+  }
+
   .stackContainer {
-    width: 90%;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  /* about */
+  .aboutTitle {
+    font-size: 28px;
   }
 }

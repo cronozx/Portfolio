@@ -75,3 +75,21 @@
         box-shadow: 0 8px 40px rgba(255, 255, 255, 0.2);
     }
 }
+
+@media(max-width: 900px) {
+    .cardContainer {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .projectTitle {
+        font-size: 18px;
+    }
+
+    .projectDesc {
+        font-size: 13px;
+    }
+}

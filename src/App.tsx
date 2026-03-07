@@ -32,6 +32,14 @@ function App() {
     setIsContactModalOpen(false);
   };
 
+  const handleOpenContactModal = () => {
+    // Scroll to top on mobile to ensure modal is visible
+    if (window.innerWidth < 900) {
+      window.scrollTo(0, 0);
+    }
+    openContactModal();
+  };
+
   const firstNameRef = useRef<HTMLSpanElement>(null);
   const lastNameRef = useRef<HTMLSpanElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
@@ -286,7 +294,7 @@ function App() {
 
               <div className='iconButtonBar'>
                 <IconButton iconName='github' onClick={openGithub}></IconButton>
-                <IconButton iconName='envelope-fill' onClick={openContactModal}></IconButton>
+                <IconButton iconName='envelope-fill' onClick={handleOpenContactModal}></IconButton>
               </div>
             </div>
             {/* landing page end  */}

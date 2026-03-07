@@ -82,7 +82,11 @@
     .snakeSection {
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 12px;
+        gap: 12px;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .snakeSectionLeft {
@@ -94,8 +98,8 @@
         border-left: none;
         border-right: none;
         border-bottom: 3px solid #8800FF;
-        padding: 15px;
-        padding-bottom: 20px;
+        padding: 10px;
+        padding-bottom: 15px;
         text-align: center;
         align-items: center;
     }
@@ -117,6 +121,12 @@
     .snakeSectionLeft .snakeSectionTitle::before {
         right: 0;
         left: 0;
+    }
+
+    .snakeSectionContent {
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     @media (hover: hover) and (pointer: fine) {
