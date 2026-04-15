@@ -74,11 +74,19 @@ function App() {
     },
     {
       name: 'File Converter',
-      description: 'File converter can convert to GIF, JPG, PNG, PDF, SVG, and WEBP',
+      description: 'File converter can convert to GIF, JPG, PNG, PDF, SVG, and WEBP.',
       stack: ['React', 'TypeScript', 'Tailwind CSS', 'Java', 'SpringBoot'],
       links: [
         { name: 'Frontend Repo',  function: () => window.open('https://github.com/cronozx/File-Converter-Frontend')  },
         { name: 'Backend Repo',  function: () => window.open('https://github.com/cronozx/File-Converter-Backend')  }
+      ]
+    },
+    {
+      name: 'MMOP',
+      description: 'Collabortive mod manager allowing you to easily create and manage modpacks with groups of friends.',
+      stack: ['Electron', 'React', 'TypeScript', 'JavaScript', 'MongoDB'],
+      links: [
+        { name: 'Project Website', function: () => window.open('https://www.mmop.app') }
       ]
     }
   ]

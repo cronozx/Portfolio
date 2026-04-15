@@ -8,11 +8,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 105%;
+    width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background: rgb(51, 51, 51);
+    background: rgba(32, 32, 40, 0.96);
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 1;
@@ -26,14 +26,15 @@
 }
 
 .logo {
-    width: 3vh;
+    width: 34px;
     height: auto;
     flex-shrink: 1;
-    padding: 1%;
+    padding: 2px;
 }
 
 .logoName {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.2;
     color: white;
     text-decoration: underline;
     text-decoration-color: #8800FF;

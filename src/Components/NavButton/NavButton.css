@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px;
+    padding: 12px 14px;
     gap: 8px;
 
     width: 130px;
@@ -16,9 +16,9 @@
     border-radius: 8px;
 
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 100%;
+    line-height: 1.25;
     text-decoration-line: underline;
 
     color: #F5F5F5;
@@ -31,4 +31,9 @@
 
 .navButton:hover {
     cursor: pointer;
+}
+
+.navButton:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
 }
