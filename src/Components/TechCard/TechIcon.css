@@ -1,41 +1,39 @@
-.logoContainer {
-    position: relative;
-    display: inline-block;
+.techPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px 8px 10px;
+
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+
+  transition: border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
 
-.overlay {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background: rgba(32, 32, 40, 0.96);
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1;
-    text-align: center;
+.techPill__logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.techPill__name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--body);
+  white-space: nowrap;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .logoContainer:hover .overlay {
-        opacity: 1;
-    }
-}
+  .techPill:hover {
+    border-color: var(--brand-line);
+    background: var(--surface-hover);
+    transform: translateY(-2px);
+  }
 
-.logo {
-    width: 34px;
-    height: auto;
-    flex-shrink: 1;
-    padding: 2px;
-}
-
-.logoName {
-    font-size: 14px;
-    line-height: 1.2;
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: #8800FF;
+  .techPill:hover .techPill__name {
+    color: var(--ink);
+  }
 }

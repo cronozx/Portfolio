@@ -1,93 +1,78 @@
 .aboutContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    width: 100%;
-    max-width: 900px;
-    background: rgba(8, 8, 12, 0.68);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 100%;
+  max-width: 620px;
 }
 
 .aboutContent {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 .aboutText {
-    font-family: 'Inria Sans';
-    font-size: 19px;
-    line-height: 1.7;
-    color: #E4E4EE;
-    margin: 0;
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--body);
+  max-width: 60ch;
+}
+
+.aboutText:first-child {
+  color: var(--ink);
 }
 
 .aboutHighlights {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .highlightItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    background: rgba(136, 0, 255, 0.1);
-    border: 1px solid rgba(136, 0, 255, 0.3);
-    border-radius: 8px;
-    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .highlightItem:hover {
-        background: rgba(136, 0, 255, 0.2);
-        border-color: rgba(136, 0, 255, 0.5);
-        transform: translateY(-2px);
-    }
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 15px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
 }
 
 .highlightIcon {
-    font-size: 20px;
-    color: #8800FF;
+  font-size: 16px;
+  color: var(--brand-text);
 }
 
 .highlightText {
-    font-family: 'Inria Sans';
-    font-size: 15px;
-    color: #FFFFFF;
-    font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
 }
 
-/* Media queries */
-@media(max-width: 900px) {
-    .aboutContainer {
-        width: 100%;
-        padding: 14px;
-        gap: 15px;
-        box-sizing: border-box;
-    }
+@media (hover: hover) and (pointer: fine) {
+  .highlightItem:hover {
+    border-color: var(--brand-line);
+    background: var(--surface-hover);
+  }
+}
 
-    .aboutText {
-        font-size: 15px;
-        line-height: 1.6;
-    }
+@media (max-width: 900px) {
+  .aboutContainer {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 
-    .aboutHighlights {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
+  .aboutText {
+    font-size: var(--text-base);
+  }
 
-    .highlightItem {
-        padding: 10px 15px;
-    }
-
-    .highlightText {
-        font-size: 13px;
-    }
+  .aboutHighlights {
+    justify-content: center;
+  }
 }

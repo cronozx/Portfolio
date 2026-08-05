@@ -2,11 +2,14 @@ import './NavButton.css'
 
 interface NavButtonInterface {
     buttonName: string,
-    onClick: () => void
+    onClick: () => void,
+    variant?: 'primary' | 'ghost'
 }
 
-export const NavButton: React.FC<NavButtonInterface> = ({ buttonName, onClick }) => {
+export const NavButton: React.FC<NavButtonInterface> = ({ buttonName, onClick, variant = 'ghost' }) => {
     return (
-        <button className='navButton' onClick={onClick}>{buttonName}</button>
+        <button className={`navButton navButton--${variant}`} onClick={onClick}>
+            {buttonName}
+        </button>
     )
 }

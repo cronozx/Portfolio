@@ -1,26 +1,29 @@
 .iconbutton {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    gap: 8px;
+  width: 48px;
+  height: 48px;
 
-    width: 48px;
-    height: 48px;
+  font-size: 19px;
+  color: var(--body);
 
-    background: #2C2C2C;
-    border: 1px solid #2C2C2C;
-    border-radius: 32px;
+  background: var(--surface);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius-pill);
+
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
 }
 
 .iconbutton:hover {
-    cursor: pointer;
-}
-
-.iconbutton:focus-visible {
-    outline: 2px solid #FFFFFF;
-    outline-offset: 2px;
+  color: var(--brand-text);
+  border-color: var(--brand-line);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
 }

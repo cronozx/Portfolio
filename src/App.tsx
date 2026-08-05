@@ -11,6 +11,7 @@ import { Project } from './Components/ProjectCard/Projects';
 import { TechContainer } from './Components/TechContainer/TechContainer';
 import { Section } from './Components/Section/Section';
 import { AboutMe } from './Components/AboutMe/AboutMe';
+import { NavBar } from './Components/NavBar/NavBar';
 
 export interface TechInterface {
   category: string,
@@ -165,9 +166,16 @@ function App() {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TextPlugin);
 
   useEffect(() => {
-    if (firstNameRef.current && lastNameRef.current) {
-      typewriter(firstNameRef.current, lastNameRef.current);
+    if (!firstNameRef.current || !lastNameRef.current) return;
+
+    // Respect reduced-motion: show the name instantly instead of typing it out.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      firstNameRef.current.textContent = 'Joseph';
+      lastNameRef.current.textContent = 'Greenhouse';
+      return;
     }
+
+    typewriter(firstNameRef.current, lastNameRef.current);
   }, [])
 
   useLayoutEffect(() => {
@@ -283,27 +291,52 @@ function App() {
   }, []);
 
   return (
-      <div className="App" id="smooth-wrapper" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${process.env.PUBLIC_URL + '/background.png'})`}}>
+      <div className="App" id="smooth-wrapper" style={{backgroundImage: `linear-gradient(rgba(6, 6, 9, 0.78), rgba(6, 6, 9, 0.92)),url(${process.env.PUBLIC_URL + '/background.png'})`}}>
+        <NavBar onContact={handleOpenContactModal} />
         <div id="smooth-content">
           <div className='main'>
             {/* landing page start  */}
             <div className='landing'>
-              <div className='name' id='name'>
-                <span ref={firstNameRef}></span> <br/>
-                <span ref={lastNameRef}></span>
-              </div>
-              <div className='desc'> <i className='bi bi-caret-right'/>Full Stack Developer</div>
+              <div className='landingInner'>
+                <p className='heroRole'>
+                  <span className='heroRoleDot' aria-hidden='true'></span>
+                  Full-Stack Software Engineer
+                </p>
+                <h1 className='name' id='name'>
+                  <span ref={firstNameRef}></span> <span ref={lastNameRef}></span>
+                </h1>
+                <p className='heroIntro'>
+                  I build clean, minimal products end to end &mdash; from interface
+                  to infrastructure. Currently working in the networking field.
+                </p>
 
-              <div className='buttonBar'>                
-                <NavButton buttonName='Projects' onClick={() => {ScrollSmoother.get()?.scrollTo(document.getElementById('work'), true)}}/>
-                <NavButton buttonName='Tech Stack' onClick={() => {ScrollSmoother.get()?.scrollTo(document.getElementById('stack'), true)}}/>
-                <NavButton buttonName='About Me' onClick={() => {ScrollSmoother.get()?.scrollTo(document.getElementById('aboutme'), true)}}/>
+                <div className='heroActions'>
+                  <NavButton
+                    buttonName='View projects'
+                    variant='primary'
+                    onClick={() => {ScrollSmoother.get()?.scrollTo(document.getElementById('work'), true, 'top 80px')}}
+                  />
+                  <NavButton
+                    buttonName='Get in touch'
+                    variant='ghost'
+                    onClick={handleOpenContactModal}
+                  />
+                  <div className='iconButtonBar'>
+                    <IconButton iconName='github' label='GitHub profile' onClick={openGithub}></IconButton>
+                    <IconButton iconName='envelope-fill' label='Contact me' onClick={handleOpenContactModal}></IconButton>
+                  </div>
+                </div>
               </div>
 
-              <div className='iconButtonBar'>
-                <IconButton iconName='github' onClick={openGithub}></IconButton>
-                <IconButton iconName='envelope-fill' onClick={handleOpenContactModal}></IconButton>
-              </div>
+              <a
+                className='scrollCue'
+                href='#work'
+                onClick={(e) => {e.preventDefault(); ScrollSmoother.get()?.scrollTo(document.getElementById('work'), true, 'top 80px')}}
+                aria-label='Scroll to projects'
+              >
+                <span className='scrollCueLabel'>Scroll</span>
+                <span className='scrollCueLine' aria-hidden='true'></span>
+              </a>
             </div>
             {/* landing page end  */}
 

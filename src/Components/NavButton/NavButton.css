@@ -1,39 +1,54 @@
 .navButton {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 14px;
-    gap: 8px;
+  padding: 13px 24px;
+  min-height: 48px;
 
-    width: 130px;
-    height: 50px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
 
-    background: #151515;
-    border: 1px solid #2C2C2C;
-    border-radius: 8px;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-    text-decoration-line: underline;
-
-    color: #F5F5F5;
-    text-decoration-color: #8800FF;
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+  transition: transform var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
 }
 
-.navButton:hover {
-    cursor: pointer;
+/* Primary — the one purple moment in the hero */
+.navButton--primary {
+  border: 1px solid var(--brand);
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 8px 26px rgba(136, 0, 255, 0.35);
 }
 
-.navButton:focus-visible {
-    outline: 2px solid #FFFFFF;
-    outline-offset: 2px;
+.navButton--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 34px rgba(136, 0, 255, 0.5);
+  background: #9614ff;
+}
+
+/* Ghost — restrained, hairline */
+.navButton--ghost {
+  border: 1px solid var(--hairline-strong);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.navButton--ghost:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-line);
+  background: var(--surface-hover);
+}
+
+.navButton:active {
+  transform: translateY(0);
 }

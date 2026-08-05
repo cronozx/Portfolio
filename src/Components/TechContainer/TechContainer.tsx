@@ -10,7 +10,7 @@ interface TechContainerInterface {
 
 const DISPLAY_NAME_MAP: Record<string, string> = {
   tailwindcss: 'Tailwind CSS',
-  bootstrap: 'Bootstap',
+  bootstrap: 'Bootstrap',
   nodejs: 'NodeJS',
   materialui: 'Material UI',
   springboot: 'Spring Boot',

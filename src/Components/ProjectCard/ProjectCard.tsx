@@ -10,15 +10,24 @@ interface ProjectCardInterface {
 
 export const ProjectCard: React.FC<ProjectCardInterface> = ({projectName, projectDesc, projectStack, projectLinks}) => {
     return (
-        <div className='cardContainer'>
-            <span className='projectTitle'>{projectName}</span>
-            <span className='projectStack'>Stack: {projectStack.join(', ')}</span>
-            <span className='projectDesc'>{projectDesc}</span>
+        <article className='cardContainer'>
+            <h3 className='projectTitle'>{projectName}</h3>
+            <p className='projectDesc'>{projectDesc}</p>
+
+            <ul className='projectStack' aria-label='Tech stack'>
+                {projectStack.map((tech) => (
+                    <li key={tech} className='stackChip'>{tech}</li>
+                ))}
+            </ul>
+
             <div className='linkWrapper'>
-                {Array.from(projectLinks.entries()).map(([i, project]) => (
-                    <button className='projectLink' onClick={project.function}>{project.name}</button>
+                {projectLinks.map((project) => (
+                    <button key={project.name} className='projectLink' onClick={project.function}>
+                        {project.name}
+                        <i className='bi bi-arrow-up-right' aria-hidden='true'></i>
+                    </button>
                 ))}
             </div>
-        </div>
+        </article>
     )
 }
