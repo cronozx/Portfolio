@@ -26,19 +26,13 @@ export const Section = forwardRef<HTMLDivElement, SectionProps>(
       </div>
     );
 
+    /* Title always comes first in the DOM so it stays above the content when
+       the section collapses to a column; CSS `order` swaps the columns for
+       left-aligned sections on desktop. */
     return (
       <div className={`snakeSection ${alignmentClass}`} id={id} ref={ref}>
-        {align === 'right' ? (
-          <>
-            {titleElement}
-            {contentElement}
-          </>
-        ) : (
-          <>
-            {contentElement}
-            {titleElement}
-          </>
-        )}
+        {titleElement}
+        {contentElement}
       </div>
     );
   }
