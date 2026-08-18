@@ -61,8 +61,7 @@ function App() {
       description: 'Battle Royal Minecraft plugin based off of the JJK manga.',
       stack: ['Java', 'Redis'],
       links: [
-        { name: 'Bukkit Repo',  function: () => window.open('https://github.com/cronozx/CullingGames-Bukkit')  },
-        { name: 'Velocity Repo', function: () => window.open('https://github.com/cronozx/CullingGames-Velocity') }
+
       ]
     },
     {
